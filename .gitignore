@@ -3,3 +3,4 @@
 build/
 pubspec.lock
 .superpowers/
+.DS_Store
