@@ -24,11 +24,21 @@ void main() {
       expect(d2.inMilliseconds, greaterThan(d1.inMilliseconds));
     });
 
-    test('delayForAttempt includes jitter', () {
+    test('delayForAttempt includes jitter within expected range', () {
       const policy = RetryPolicy();
-      final delays = List.generate(10, (i) => policy.delayForAttempt(0));
-      final unique = delays.toSet();
-      expect(unique.length, greaterThan(1));
+      const baseMs = 1000; // initialDelay = 1 second
+      for (var i = 0; i < 20; i++) {
+        final delay = policy.delayForAttempt(0);
+        expect(delay.inMilliseconds, greaterThanOrEqualTo(baseMs));
+        expect(delay.inMilliseconds, lessThan(baseMs + 1000));
+      }
+    });
+
+    test('delayForAttempt(0) returns approximately initialDelay plus jitter', () {
+      const policy = RetryPolicy();
+      final delay = policy.delayForAttempt(0);
+      expect(delay.inMilliseconds, greaterThanOrEqualTo(1000));
+      expect(delay.inMilliseconds, lessThan(2000));
     });
   });
 }

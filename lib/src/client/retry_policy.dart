@@ -2,6 +2,8 @@ import 'dart:math';
 
 /// Configuration for automatic retry with exponential backoff.
 class RetryPolicy {
+  /// Maximum number of retry attempts. Used by the HTTP client to determine
+  /// how many times to retry before giving up. Not checked by [delayForAttempt].
   final int maxRetries;
   final Duration initialDelay;
 
