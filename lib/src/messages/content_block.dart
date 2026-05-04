@@ -1,6 +1,8 @@
 /// Base sealed class for content blocks in messages.
 sealed class ContentBlock {
   const ContentBlock();
+
+  Map<String, dynamic> toJson();
 }
 
 /// Text content block from the model.
@@ -13,6 +15,7 @@ class TextBlock extends ContentBlock {
     return TextBlock(text: json['text'] as String);
   }
 
+  @override
   Map<String, dynamic> toJson() => {'type': 'text', 'text': text};
 }
 
@@ -32,6 +35,7 @@ class ToolUseBlock extends ContentBlock {
     );
   }
 
+  @override
   Map<String, dynamic> toJson() => {'type': 'tool_use', 'id': id, 'name': name, 'input': input};
 }
 
@@ -43,6 +47,7 @@ class ToolResultBlock extends ContentBlock {
 
   const ToolResultBlock({required this.toolUseId, this.content, this.contentBlocks});
 
+  @override
   Map<String, dynamic> toJson() => {
     'type': 'tool_result',
     'tool_use_id': toolUseId,
@@ -59,6 +64,7 @@ class ImageBlock extends ContentBlock {
 
   const ImageBlock({required this.sourceType, required this.mediaType, required this.data});
 
+  @override
   Map<String, dynamic> toJson() => {
     'type': 'image',
     'source': {'type': sourceType, 'media_type': mediaType, 'data': data},
@@ -79,5 +85,6 @@ class ThinkingBlock extends ContentBlock {
     );
   }
 
+  @override
   Map<String, dynamic> toJson() => {'type': 'thinking', 'thinking': thinking, 'signature': signature};
 }
