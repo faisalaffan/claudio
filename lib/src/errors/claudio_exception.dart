@@ -7,5 +7,5 @@ abstract class ClaudioException implements Exception {
   const ClaudioException(this.message, {this.statusCode, this.requestId});
 
   @override
-  String toString() => '${runtimeType}: $message';
+  String toString() => '$runtimeType: $message';
 }
