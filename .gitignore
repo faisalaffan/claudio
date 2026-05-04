@@ -4,3 +4,5 @@ build/
 pubspec.lock
 .superpowers/
 .DS_Store
+.kiro
+.dart_tool
