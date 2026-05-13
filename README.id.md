@@ -3,12 +3,12 @@
 </p>
 
 <p align="center">
-  🇬🇧 English · 🇮🇩 <a href="README.id.md">Bahasa Indonesia</a>
+  🇬🇧 <a href="README.md">English</a> · 🇮🇩 Bahasa Indonesia
 </p>
 
 # claudio
 
-Multi-provider AI SDK for Dart/Flutter — one interface, many providers.
+Multi-provider AI SDK untuk Dart/Flutter — satu interface, banyak provider.
 
 [![pub package](https://img.shields.io/pub/v/claudio.svg)](https://pub.dev/packages/claudio)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -36,7 +36,7 @@ void main() async {
       model: 'claude-sonnet-4-20250514',
       maxTokens: 1024,
       messages: [
-        MessageParam(role: 'user', content: 'Hello!'),
+        MessageParam(role: 'user', content: 'Halo!'),
       ],
     ),
   );
@@ -46,7 +46,7 @@ void main() async {
 }
 ```
 
-## Providers
+## Provider
 
 ```dart
 // Anthropic
@@ -55,28 +55,28 @@ ClaudioClient(apiKey: 'sk-ant-...', provider: Provider.anthropic);
 // DeepSeek (Anthropic-compatible API)
 ClaudioClient(apiKey: 'sk-ds-...', provider: Provider.deepseek);
 
-// Auto-detect from environment
+// Auto-detect dari environment
 ClaudioClient.fromEnvironment();
 ```
 
-## Features
+## Fitur
 
-- **Messages API** — `create()` and `createStream()` with SSE
-- **Multi-tools** — schema builder for type-safe JSON Schema
+- **Messages API** — `create()` dan `createStream()` dengan SSE
+- **Multi-tools** — schema builder untuk JSON Schema type-safe
 - **Extended thinking** — enabled, disabled, adaptive
 - **Streaming** — real-time token & tool input chunks
-- **Error handling** — typed exception hierarchy (auth, rate limit, network, etc.)
-- **Retry** — exponential backoff + jitter for 429 and 5xx
+- **Error handling** — typed exception hierarchy (auth, rate limit, network, dll.)
+- **Retry** — exponential backoff + jitter untuk 429 dan 5xx
 
-## Tools & Streaming
+## Tool & Streaming
 
 ```dart
 final tool = Tool(
   name: 'get_weather',
-  description: 'Weather by city.',
+  description: 'Cuaca berdasarkan kota.',
   inputSchema: SchemaBuilder().object(
     properties: {
-      'city': SchemaProperty.string(description: 'City name'),
+      'city': SchemaProperty.string(description: 'Nama kota'),
     },
     required: ['city'],
   ).build(),
@@ -86,7 +86,7 @@ final stream = client.messages.createStream(
   CreateMessageRequest(
     model: 'claude-sonnet-4-20250514',
     maxTokens: 1024,
-    messages: [MessageParam(role: 'user', content: 'Weather in Jakarta?')],
+    messages: [MessageParam(role: 'user', content: 'Cuaca di Jakarta?')],
     tools: [tool],
   ),
 );
@@ -117,7 +117,7 @@ try {
 }
 ```
 
-## License
+## Lisensi
 
 MIT
 
