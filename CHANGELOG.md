@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-05-14
+
+### Added
+
+- Dartdoc comments to all public exception classes, streaming events, and provider adapters
+
 ## [0.1.2] - 2026-05-14
 
 ### Added

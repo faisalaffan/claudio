@@ -10,6 +10,7 @@ import '../providers/provider_adapter.dart';
 import '../streaming/sse_decoder.dart';
 import '../streaming/stream_events.dart';
 
+/// Handles `/v1/messages` create and createStream requests.
 class MessagesApi {
   final ClaudioHttpClient _httpClient;
   final ProviderAdapter _adapter;

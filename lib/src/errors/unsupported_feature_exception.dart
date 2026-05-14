@@ -2,6 +2,7 @@ import '../client/feature.dart';
 import '../client/provider.dart';
 import 'claudio_exception.dart';
 
+/// Thrown when a requested feature is not supported by the selected provider.
 class UnsupportedFeatureException extends ClaudioException {
   final Feature feature;
   final Provider provider;

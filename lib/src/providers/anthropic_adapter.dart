@@ -2,6 +2,7 @@ import '../client/feature.dart';
 import '../client/provider.dart';
 import 'provider_adapter.dart';
 
+/// Provider adapter for the Anthropic API.
 class AnthropicAdapter extends ProviderAdapter {
   @override
   Provider get provider => Provider.anthropic;

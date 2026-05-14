@@ -9,6 +9,7 @@ import '../errors/network_exception.dart';
 import '../errors/rate_limit_exception.dart';
 import '../providers/provider_adapter.dart';
 
+/// Low-level HTTP client with retry and error handling.
 class ClaudioHttpClient {
   final http.Client _inner;
   final RetryPolicy _retryPolicy;

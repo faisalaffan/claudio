@@ -2,6 +2,7 @@ import '../client/feature.dart';
 import '../client/provider.dart';
 import 'provider_adapter.dart';
 
+/// Provider adapter for the DeepSeek API (Anthropic-compatible).
 class DeepSeekAdapter extends ProviderAdapter {
   @override
   Provider get provider => Provider.deepseek;

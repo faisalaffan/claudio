@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
+/// Decodes Server-Sent Events from a byte stream.
 class SseDecoder {
   final Stream<String> _lines;
 
