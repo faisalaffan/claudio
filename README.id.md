@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/03_BANNER_DARK.png" alt="Claudio Banner" width="100%">
+  <img src="https://raw.githubusercontent.com/faisalaffan/claudio/dev/assets/03_BANNER_DARK.png" alt="Claudio Banner" width="100%">
 </p>
 
 <p align="center">
@@ -10,20 +10,20 @@
 
 Multi-provider AI SDK untuk Dart/Flutter — satu interface, banyak provider.
 
-[![pub package](https://img.shields.io/pub/v/claudio.svg)](https://pub.dev/packages/claudio)
+[![pub package](https://img.shields.io/pub/v/claudio_sdk.svg)](https://pub.dev/packages/claudio_sdk)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## Install
 
 ```yaml
 dependencies:
-  claudio: ^0.1.0
+  claudio_sdk: ^0.1.0
 ```
 
 ## Quick Start
 
 ```dart
-import 'package:claudio/claudio.dart';
+import 'package:claudio_sdk/claudio_sdk.dart';
 
 void main() async {
   final client = ClaudioClient(
@@ -124,5 +124,5 @@ MIT
 ---
 
 <p align="center">
-  <img src="assets/04_LOGO_SINGLE.png" alt="Claudio" width="120">
+  <img src="https://raw.githubusercontent.com/faisalaffan/claudio/dev/assets/04_LOGO_SINGLE.png" alt="Claudio" width="120">
 </p>
