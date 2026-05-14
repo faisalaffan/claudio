@@ -7,7 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.0] - 2024-01-01
+## [0.1.1] - 2026-05-14
+
+### Fixed
+
+- Fix README image paths using absolute GitHub URLs for pub.dev rendering
+- Fix pub badge, install instructions, and import paths to use `claudio_sdk`
+
+## [0.1.0] - 2026-05-14
 
 ### Added
 
