@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-05-14
+
+### Added
+
+- GitHub Actions CI workflow for automated pub.dev publishing
+
 ## [0.1.1] - 2026-05-14
 
 ### Fixed
