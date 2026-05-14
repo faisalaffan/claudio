@@ -1,10 +1,10 @@
 import 'dart:convert';
-import 'package:claudio/src/client/retry_policy.dart';
-import 'package:claudio/src/errors/authentication_exception.dart';
-import 'package:claudio/src/http/http_client.dart';
-import 'package:claudio/src/messages/create_request.dart';
-import 'package:claudio/src/messages/message_param.dart';
-import 'package:claudio/src/messages/messages_api.dart';
+import 'package:claudio_sdk/src/client/retry_policy.dart';
+import 'package:claudio_sdk/src/errors/authentication_exception.dart';
+import 'package:claudio_sdk/src/http/http_client.dart';
+import 'package:claudio_sdk/src/messages/create_request.dart';
+import 'package:claudio_sdk/src/messages/message_param.dart';
+import 'package:claudio_sdk/src/messages/messages_api.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';

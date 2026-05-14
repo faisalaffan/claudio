@@ -1,9 +1,9 @@
-import 'package:claudio/src/client/feature.dart';
-import 'package:claudio/src/client/provider.dart';
-import 'package:claudio/src/errors/unsupported_feature_exception.dart';
-import 'package:claudio/src/messages/create_request.dart';
-import 'package:claudio/src/providers/anthropic_adapter.dart';
-import 'package:claudio/src/providers/deepseek_adapter.dart';
+import 'package:claudio_sdk/src/client/feature.dart';
+import 'package:claudio_sdk/src/client/provider.dart';
+import 'package:claudio_sdk/src/errors/unsupported_feature_exception.dart';
+import 'package:claudio_sdk/src/messages/create_request.dart';
+import 'package:claudio_sdk/src/providers/anthropic_adapter.dart';
+import 'package:claudio_sdk/src/providers/deepseek_adapter.dart';
 import 'package:test/test.dart';
 
 void main() {

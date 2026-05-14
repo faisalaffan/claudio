@@ -1,0 +1,4 @@
+# Superpowers internal files (not needed by consumers)
+docs/
+# Assets for README (large, not needed by consumers)
+assets/

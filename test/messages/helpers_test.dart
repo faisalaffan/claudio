@@ -1,5 +1,5 @@
-import 'package:claudio/src/messages/content_block.dart';
-import 'package:claudio/src/messages/helpers.dart';
+import 'package:claudio_sdk/src/messages/content_block.dart';
+import 'package:claudio_sdk/src/messages/helpers.dart';
 import 'package:test/test.dart';
 
 void main() {

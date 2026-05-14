@@ -1,4 +1,4 @@
-import 'package:claudio/claudio.dart';
+import 'package:claudio_sdk/claudio_sdk.dart';
 
 void main() async {
   // Anthropic

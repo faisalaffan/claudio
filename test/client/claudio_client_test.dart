@@ -1,7 +1,7 @@
-import 'package:claudio/src/client/claudio_client.dart';
-import 'package:claudio/src/client/provider.dart';
-import 'package:claudio/src/client/retry_policy.dart';
-import 'package:claudio/src/errors/client_closed_exception.dart';
+import 'package:claudio_sdk/src/client/claudio_client.dart';
+import 'package:claudio_sdk/src/client/provider.dart';
+import 'package:claudio_sdk/src/client/retry_policy.dart';
+import 'package:claudio_sdk/src/errors/client_closed_exception.dart';
 import 'package:test/test.dart';
 
 void main() {

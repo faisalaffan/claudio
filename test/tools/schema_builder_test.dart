@@ -1,5 +1,5 @@
-import 'package:claudio/src/tools/schema_builder.dart';
-import 'package:claudio/src/tools/schema_property.dart';
+import 'package:claudio_sdk/src/tools/schema_builder.dart';
+import 'package:claudio_sdk/src/tools/schema_property.dart';
 import 'package:test/test.dart';
 
 void main() {

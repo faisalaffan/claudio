@@ -1,4 +1,4 @@
-name: claudio
+name: claudio_sdk
 description: >-
   Multi-provider AI SDK for Dart/Flutter with Anthropic Messages API-compatible
   interface. Supports Anthropic, DeepSeek, and more.

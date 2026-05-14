@@ -1,5 +1,5 @@
-import 'package:claudio/src/tools/tool.dart';
-import 'package:claudio/src/tools/tool_choice.dart';
+import 'package:claudio_sdk/src/tools/tool.dart';
+import 'package:claudio_sdk/src/tools/tool_choice.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -1,4 +1,4 @@
-import 'package:claudio/src/client/retry_policy.dart';
+import 'package:claudio_sdk/src/client/retry_policy.dart';
 import 'package:test/test.dart';
 
 void main() {

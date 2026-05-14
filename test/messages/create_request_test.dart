@@ -1,7 +1,7 @@
-import 'package:claudio/src/messages/create_request.dart';
-import 'package:claudio/src/messages/message_param.dart';
-import 'package:claudio/src/tools/tool.dart';
-import 'package:claudio/src/tools/tool_choice.dart';
+import 'package:claudio_sdk/src/messages/create_request.dart';
+import 'package:claudio_sdk/src/messages/message_param.dart';
+import 'package:claudio_sdk/src/tools/tool.dart';
+import 'package:claudio_sdk/src/tools/tool_choice.dart';
 import 'package:test/test.dart';
 
 void main() {

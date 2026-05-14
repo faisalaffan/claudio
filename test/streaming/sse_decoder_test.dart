@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:claudio/src/streaming/sse_decoder.dart';
+import 'package:claudio_sdk/src/streaming/sse_decoder.dart';
 import 'package:test/test.dart';
 
 void main() {

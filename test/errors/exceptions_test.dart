@@ -1,14 +1,14 @@
-import 'package:claudio/src/client/feature.dart';
-import 'package:claudio/src/client/provider.dart';
-import 'package:claudio/src/errors/claudio_exception.dart';
-import 'package:claudio/src/errors/authentication_exception.dart';
-import 'package:claudio/src/errors/rate_limit_exception.dart';
-import 'package:claudio/src/errors/invalid_request_exception.dart';
-import 'package:claudio/src/errors/api_exception.dart';
-import 'package:claudio/src/errors/network_exception.dart';
-import 'package:claudio/src/errors/stream_exception.dart';
-import 'package:claudio/src/errors/unsupported_feature_exception.dart';
-import 'package:claudio/src/errors/client_closed_exception.dart';
+import 'package:claudio_sdk/src/client/feature.dart';
+import 'package:claudio_sdk/src/client/provider.dart';
+import 'package:claudio_sdk/src/errors/claudio_exception.dart';
+import 'package:claudio_sdk/src/errors/authentication_exception.dart';
+import 'package:claudio_sdk/src/errors/rate_limit_exception.dart';
+import 'package:claudio_sdk/src/errors/invalid_request_exception.dart';
+import 'package:claudio_sdk/src/errors/api_exception.dart';
+import 'package:claudio_sdk/src/errors/network_exception.dart';
+import 'package:claudio_sdk/src/errors/stream_exception.dart';
+import 'package:claudio_sdk/src/errors/unsupported_feature_exception.dart';
+import 'package:claudio_sdk/src/errors/client_closed_exception.dart';
 import 'package:test/test.dart';
 
 void main() {

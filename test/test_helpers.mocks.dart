@@ -7,10 +7,10 @@ import 'dart:async' as _i3;
 import 'dart:convert' as _i4;
 import 'dart:typed_data' as _i6;
 
-import 'package:claudio/src/client/feature.dart' as _i9;
-import 'package:claudio/src/client/provider.dart' as _i8;
-import 'package:claudio/src/messages/create_request.dart' as _i10;
-import 'package:claudio/src/providers/provider_adapter.dart' as _i7;
+import 'package:claudio_sdk/src/client/feature.dart' as _i9;
+import 'package:claudio_sdk/src/client/provider.dart' as _i8;
+import 'package:claudio_sdk/src/messages/create_request.dart' as _i10;
+import 'package:claudio_sdk/src/providers/provider_adapter.dart' as _i7;
 import 'package:http/http.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i5;

@@ -1,4 +1,4 @@
-import 'package:claudio/src/client/provider.dart';
+import 'package:claudio_sdk/src/client/provider.dart';
 import 'package:test/test.dart';
 
 void main() {

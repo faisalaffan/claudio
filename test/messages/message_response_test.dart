@@ -1,4 +1,4 @@
-import 'package:claudio/src/messages/message_response.dart';
+import 'package:claudio_sdk/src/messages/message_response.dart';
 import 'package:test/test.dart';
 
 void main() {
