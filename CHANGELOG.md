@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.10] - 2026-05-16
+
+### Fixed
+
+- Commit pubspec.lock for reproducible builds, fix GHCR Dockerfile COPY failure
+- Update LICENSE copyright to 2026 claudio_sdk
+
 ## [0.1.9] - 2026-05-16
 
 ### Added

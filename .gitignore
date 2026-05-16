@@ -1,7 +1,6 @@
 .dart_tool/
 .packages
 build/
-pubspec.lock
 .superpowers/
 .DS_Store
 .kiro
