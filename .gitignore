@@ -6,3 +6,5 @@ pubspec.lock
 .DS_Store
 .kiro
 .dart_tool
+doc/
+docs/superpowers/

@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.5] - 2026-05-16
+
+### Added
+
+- Pub.dev metadata: `documentation`, `topics`, `screenshots`, and `funding` fields in pubspec.yaml
+- Terminal output screenshot (`screenshots/terminal_example.png`)
+- Architecture diagram screenshot (`screenshots/architecture.png`)
+
+### Changed
+
+- Format all source files with `dart format`
+
 ## [0.1.4] - 2026-05-15
 
 ### Fixed
