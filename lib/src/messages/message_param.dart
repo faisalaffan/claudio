@@ -13,7 +13,8 @@ class MessageParam {
     }
     return {
       'role': role,
-      'content': (content as List).map((b) => (b as ContentBlock).toJson()).toList(),
+      'content':
+          (content as List).map((b) => (b as ContentBlock).toJson()).toList(),
     };
   }
 }

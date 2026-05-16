@@ -12,16 +12,20 @@ class AnthropicAdapter extends ProviderAdapter {
 
   @override
   Set<Feature> get supportedFeatures => {
-    Feature.extendedThinking, Feature.imageInput, Feature.toolUse,
-    Feature.streaming, Feature.systemPrompt, Feature.promptCaching,
-  };
+        Feature.extendedThinking,
+        Feature.imageInput,
+        Feature.toolUse,
+        Feature.streaming,
+        Feature.systemPrompt,
+        Feature.promptCaching,
+      };
 
   @override
   Map<String, String> buildHeaders(String apiKey) => {
-    'x-api-key': apiKey,
-    'anthropic-version': '2023-06-01',
-    'content-type': 'application/json',
-  };
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'content-type': 'application/json',
+      };
 
   @override
   Uri buildUri(String path) => Uri.parse('$baseUrl$path');

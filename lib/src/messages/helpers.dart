@@ -2,7 +2,8 @@ import 'content_block.dart';
 import 'message_param.dart';
 
 /// Create a tool result block from tool use ID and text.
-ToolResultBlock createToolResult({required String toolUseId, required String text}) {
+ToolResultBlock createToolResult(
+    {required String toolUseId, required String text}) {
   return ToolResultBlock(toolUseId: toolUseId, content: text);
 }
 

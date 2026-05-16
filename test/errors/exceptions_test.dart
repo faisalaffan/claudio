@@ -21,7 +21,8 @@ void main() {
     });
 
     test('RateLimitException with retryAfter', () {
-      final e = RateLimitException('Too many', retryAfter: Duration(seconds: 30));
+      final e =
+          RateLimitException('Too many', retryAfter: Duration(seconds: 30));
       expect(e.retryAfter, const Duration(seconds: 30));
     });
 

@@ -54,7 +54,8 @@ class MessagesApi {
       final streamedResponse = await client.send(streamedRequest);
 
       if (streamedResponse.statusCode != 200) {
-        final errorBody = await streamedResponse.stream.transform(utf8.decoder).join();
+        final errorBody =
+            await streamedResponse.stream.transform(utf8.decoder).join();
         throw StreamException(
           'Stream connection failed (${streamedResponse.statusCode}): $errorBody',
         );
@@ -103,7 +104,8 @@ class MessagesApi {
 
     final contentDelta = switch (deltaType) {
       'text_delta' => TextDelta(text: delta['text'] as String),
-      'input_json_delta' => InputJsonDelta(partialJson: delta['partial_json'] as String),
+      'input_json_delta' =>
+        InputJsonDelta(partialJson: delta['partial_json'] as String),
       'thinking_delta' => ThinkingDelta(thinking: delta['thinking'] as String),
       _ => throw StreamException('Unknown delta type: $deltaType'),
     };

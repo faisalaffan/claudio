@@ -10,7 +10,8 @@ void main() {
     });
 
     test('custom values', () {
-      const policy = RetryPolicy(maxRetries: 5, initialDelay: Duration(seconds: 3));
+      const policy =
+          RetryPolicy(maxRetries: 5, initialDelay: Duration(seconds: 3));
       expect(policy.maxRetries, 5);
       expect(policy.initialDelay, const Duration(seconds: 3));
     });
@@ -34,7 +35,8 @@ void main() {
       }
     });
 
-    test('delayForAttempt(0) returns approximately initialDelay plus jitter', () {
+    test('delayForAttempt(0) returns approximately initialDelay plus jitter',
+        () {
       const policy = RetryPolicy();
       final delay = policy.delayForAttempt(0);
       expect(delay.inMilliseconds, greaterThanOrEqualTo(1000));

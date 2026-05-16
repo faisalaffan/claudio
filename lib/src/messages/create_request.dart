@@ -18,9 +18,9 @@ class ThinkingConfig {
       : this._(type: 'auto', budgetTokens: budgetTokens);
 
   Map<String, dynamic> toJson() => {
-    'type': type,
-    if (budgetTokens != null) 'budget_tokens': budgetTokens,
-  };
+        'type': type,
+        if (budgetTokens != null) 'budget_tokens': budgetTokens,
+      };
 }
 
 /// Request parameters for the Messages API.

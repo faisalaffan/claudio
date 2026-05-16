@@ -12,7 +12,8 @@ const gray = '\x1B[90m';
 void main() {
   print('${gray}\$ dart run example/main.dart$reset\n');
 
-  print('${cyan}[claudio]${reset} ${bold}Anthropic${reset} → claude-sonnet-4-20250514');
+  print(
+      '${cyan}[claudio]${reset} ${bold}Anthropic${reset} → claude-sonnet-4-20250514');
   print('${green}✓${reset} Messages API ready\n');
 
   final output = '''

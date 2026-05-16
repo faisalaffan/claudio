@@ -17,7 +17,8 @@ class SchemaProperty {
   });
 
   const SchemaProperty.string({String? description, List<String>? enumValues})
-      : this._(type: 'string', description: description, enumValues: enumValues);
+      : this._(
+            type: 'string', description: description, enumValues: enumValues);
 
   const SchemaProperty.number({String? description})
       : this._(type: 'number', description: description);

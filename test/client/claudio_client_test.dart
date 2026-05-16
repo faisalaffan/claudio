@@ -7,7 +7,8 @@ import 'package:test/test.dart';
 void main() {
   group('ClaudioClient', () {
     test('creates with required params', () {
-      final client = ClaudioClient(apiKey: 'sk-test', provider: Provider.anthropic);
+      final client =
+          ClaudioClient(apiKey: 'sk-test', provider: Provider.anthropic);
       expect(client.provider, Provider.anthropic);
       client.close();
     });
@@ -24,13 +25,15 @@ void main() {
     });
 
     test('throws ClientClosedException after close', () {
-      final client = ClaudioClient(apiKey: 'sk-test', provider: Provider.anthropic);
+      final client =
+          ClaudioClient(apiKey: 'sk-test', provider: Provider.anthropic);
       client.close();
       expect(() => client.messages, throwsA(isA<ClientClosedException>()));
     });
 
     test('provider returns correct value', () {
-      final client = ClaudioClient(apiKey: 'sk-test', provider: Provider.deepseek);
+      final client =
+          ClaudioClient(apiKey: 'sk-test', provider: Provider.deepseek);
       expect(client.provider, Provider.deepseek);
       client.close();
     });

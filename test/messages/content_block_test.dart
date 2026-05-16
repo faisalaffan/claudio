@@ -31,7 +31,8 @@ void main() {
 
   group('ToolResultBlock', () {
     test('toJson with content', () {
-      final block = ToolResultBlock(toolUseId: 'toolu_01', content: 'Sunny, 30C');
+      final block =
+          ToolResultBlock(toolUseId: 'toolu_01', content: 'Sunny, 30C');
       final json = block.toJson();
       expect(json['type'], 'tool_result');
       expect(json['tool_use_id'], 'toolu_01');
@@ -41,7 +42,8 @@ void main() {
 
   group('ImageBlock', () {
     test('toJson', () {
-      final block = ImageBlock(sourceType: 'base64', mediaType: 'image/png', data: 'abc123');
+      final block = ImageBlock(
+          sourceType: 'base64', mediaType: 'image/png', data: 'abc123');
       final json = block.toJson();
       expect(json['type'], 'image');
       expect(json['source']['data'], 'abc123');

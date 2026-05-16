@@ -17,7 +17,9 @@ void main() {
         'model': 'claude-sonnet-4-20250514',
         'stop_reason': 'end_turn',
         'usage': {'input_tokens': 10, 'output_tokens': 20},
-        'content': [{'type': 'text', 'text': 'Hello!'}],
+        'content': [
+          {'type': 'text', 'text': 'Hello!'}
+        ],
       };
       final msg = Message.fromJson(json);
       expect(msg.id, 'msg_123');
@@ -34,7 +36,12 @@ void main() {
         'stop_reason': 'tool_use',
         'usage': {'input_tokens': 5, 'output_tokens': 15},
         'content': [
-          {'type': 'tool_use', 'id': 'toolu_01', 'name': 'get_weather', 'input': {'city': 'Tokyo'}},
+          {
+            'type': 'tool_use',
+            'id': 'toolu_01',
+            'name': 'get_weather',
+            'input': {'city': 'Tokyo'}
+          },
         ],
       };
       final msg = Message.fromJson(json);
@@ -45,7 +52,9 @@ void main() {
 
     test('text getter concatenates multiple TextBlocks', () {
       final json = {
-        'id': 'msg', 'model': 'test', 'stop_reason': 'end_turn',
+        'id': 'msg',
+        'model': 'test',
+        'stop_reason': 'end_turn',
         'usage': {'input_tokens': 1, 'output_tokens': 2},
         'content': [
           {'type': 'text', 'text': 'Hello'},
@@ -57,9 +66,13 @@ void main() {
 
     test('toAssistantParam', () {
       final json = {
-        'id': 'msg', 'model': 'test', 'stop_reason': 'end_turn',
+        'id': 'msg',
+        'model': 'test',
+        'stop_reason': 'end_turn',
         'usage': {'input_tokens': 1, 'output_tokens': 1},
-        'content': [{'type': 'text', 'text': 'Hi'}],
+        'content': [
+          {'type': 'text', 'text': 'Hi'}
+        ],
       };
       final param = Message.fromJson(json).toAssistantParam();
       expect(param.role, 'assistant');

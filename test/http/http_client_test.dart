@@ -22,7 +22,8 @@ void main() {
 
       claudioHttp = ClaudioHttpClient(
         inner: mockHttp,
-        retryPolicy: const RetryPolicy(maxRetries: 1, initialDelay: Duration(milliseconds: 10)),
+        retryPolicy: const RetryPolicy(
+            maxRetries: 1, initialDelay: Duration(milliseconds: 10)),
         timeout: const Duration(seconds: 5),
       );
     });
@@ -33,7 +34,8 @@ void main() {
         headers: anyNamed('headers'),
         body: anyNamed('body'),
       )).thenAnswer((_) async => http.Response('{"id":"ok"}', 200));
-      final response = await claudioHttp.post(adapter, 'key', '/v1/messages', {'test': true});
+      final response = await claudioHttp
+          .post(adapter, 'key', '/v1/messages', {'test': true});
       expect(response.statusCode, 200);
       expect(response.body, '{"id":"ok"}');
     });
@@ -61,7 +63,8 @@ void main() {
         if (calls == 1) return http.Response('Rate limited', 429);
         return http.Response('{"id":"ok"}', 200);
       });
-      final response = await claudioHttp.post(adapter, 'key', '/v1/messages', {});
+      final response =
+          await claudioHttp.post(adapter, 'key', '/v1/messages', {});
       expect(response.statusCode, 200);
       expect(calls, 2);
     });

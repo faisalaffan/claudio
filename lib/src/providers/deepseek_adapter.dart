@@ -12,14 +12,16 @@ class DeepSeekAdapter extends ProviderAdapter {
 
   @override
   Set<Feature> get supportedFeatures => {
-    Feature.toolUse, Feature.streaming, Feature.systemPrompt,
-  };
+        Feature.toolUse,
+        Feature.streaming,
+        Feature.systemPrompt,
+      };
 
   @override
   Map<String, String> buildHeaders(String apiKey) => {
-    'Authorization': 'Bearer $apiKey',
-    'content-type': 'application/json',
-  };
+        'Authorization': 'Bearer $apiKey',
+        'content-type': 'application/json',
+      };
 
   @override
   Uri buildUri(String path) => Uri.parse('$baseUrl$path');

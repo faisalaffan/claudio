@@ -58,11 +58,13 @@ class Message {
     };
   }
 
-  String get text => content.whereType<TextBlock>().map((b) => b.text).join('\n');
+  String get text =>
+      content.whereType<TextBlock>().map((b) => b.text).join('\n');
 
   bool get hasToolUse => content.any((b) => b is ToolUseBlock);
 
-  List<ToolUseBlock> get toolUseBlocks => content.whereType<ToolUseBlock>().toList();
+  List<ToolUseBlock> get toolUseBlocks =>
+      content.whereType<ToolUseBlock>().toList();
 
   MessageParam toAssistantParam() {
     return MessageParam(role: 'assistant', content: content);

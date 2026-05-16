@@ -42,7 +42,9 @@ void main() {
 
     test('with system prompt', () {
       final request = CreateMessageRequest(
-        model: 'test', maxTokens: 100, messages: [],
+        model: 'test',
+        maxTokens: 100,
+        messages: [],
         systemPrompt: 'Be helpful.',
       );
       expect(request.toJson()['system'], 'Be helpful.');
@@ -50,7 +52,9 @@ void main() {
 
     test('with tools and toolChoice', () {
       final request = CreateMessageRequest(
-        model: 'test', maxTokens: 100, messages: [],
+        model: 'test',
+        maxTokens: 100,
+        messages: [],
         tools: [Tool(name: 'my_tool', inputSchema: {})],
         toolChoice: const ToolChoiceAuto(),
       );
@@ -60,7 +64,8 @@ void main() {
     });
 
     test('toStreamJson sets stream to true', () {
-      final request = CreateMessageRequest(model: 'test', maxTokens: 100, messages: []);
+      final request =
+          CreateMessageRequest(model: 'test', maxTokens: 100, messages: []);
       expect(request.toStreamJson()['stream'], true);
       expect(request.toJson()['stream'], false);
     });

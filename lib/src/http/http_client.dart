@@ -81,10 +81,14 @@ class ClaudioHttpClient {
     } catch (_) {}
 
     return switch (statusCode) {
-      401 => AuthenticationException(body, statusCode: statusCode, requestId: requestId),
-      429 => RateLimitException(body, statusCode: statusCode, requestId: requestId,
+      401 => AuthenticationException(body,
+          statusCode: statusCode, requestId: requestId),
+      429 => RateLimitException(body,
+          statusCode: statusCode,
+          requestId: requestId,
           retryAfter: _parseRetryAfter(response.headers['retry-after'])),
-      400 => InvalidRequestException(body, statusCode: statusCode, requestId: requestId),
+      400 => InvalidRequestException(body,
+          statusCode: statusCode, requestId: requestId),
       _ => ApiException(body, statusCode: statusCode, requestId: requestId),
     };
   }

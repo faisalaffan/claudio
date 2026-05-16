@@ -4,7 +4,8 @@ import 'package:test/test.dart';
 void main() {
   group('Provider', () {
     test('has anthropic and deepseek values', () {
-      expect(Provider.values, containsAll([Provider.anthropic, Provider.deepseek]));
+      expect(Provider.values,
+          containsAll([Provider.anthropic, Provider.deepseek]));
     });
 
     test('Provider.anthropic name is "anthropic"', () {

@@ -20,8 +20,10 @@ void main() {
     setUp(() {
       mockHttp = MockClient();
       adapter = MockProviderAdapter();
-      when(adapter.buildUri(any)).thenReturn(Uri.parse('https://api.test.com/v1/messages'));
-      when(adapter.buildHeaders(any)).thenReturn({'x-api-key': 'test-key', 'content-type': 'application/json'});
+      when(adapter.buildUri(any))
+          .thenReturn(Uri.parse('https://api.test.com/v1/messages'));
+      when(adapter.buildHeaders(any)).thenReturn(
+          {'x-api-key': 'test-key', 'content-type': 'application/json'});
 
       claudioHttp = ClaudioHttpClient(
         inner: mockHttp,
@@ -29,19 +31,28 @@ void main() {
         timeout: const Duration(seconds: 5),
       );
 
-      api = MessagesApi(httpClient: claudioHttp, adapter: adapter, apiKey: 'test-key');
+      api = MessagesApi(
+          httpClient: claudioHttp, adapter: adapter, apiKey: 'test-key');
     });
 
     test('returns Message on success', () async {
-      when(mockHttp.post(any, headers: anyNamed('headers'), body: anyNamed('body')))
-          .thenAnswer((_) async => http.Response(jsonEncode({
-            'id': 'msg_123', 'model': 'test-model', 'stop_reason': 'end_turn',
-            'usage': {'input_tokens': 10, 'output_tokens': 20},
-            'content': [{'type': 'text', 'text': 'Hello!'}],
-          }), 200));
+      when(mockHttp.post(any,
+              headers: anyNamed('headers'), body: anyNamed('body')))
+          .thenAnswer((_) async => http.Response(
+              jsonEncode({
+                'id': 'msg_123',
+                'model': 'test-model',
+                'stop_reason': 'end_turn',
+                'usage': {'input_tokens': 10, 'output_tokens': 20},
+                'content': [
+                  {'type': 'text', 'text': 'Hello!'}
+                ],
+              }),
+              200));
 
       final request = CreateMessageRequest(
-        model: 'test-model', maxTokens: 100,
+        model: 'test-model',
+        maxTokens: 100,
         messages: [MessageParam(role: 'user', content: 'Hi')],
       );
 
@@ -51,11 +62,14 @@ void main() {
     });
 
     test('throws on error response', () async {
-      when(mockHttp.post(any, headers: anyNamed('headers'), body: anyNamed('body')))
+      when(mockHttp.post(any,
+              headers: anyNamed('headers'), body: anyNamed('body')))
           .thenAnswer((_) async => http.Response('Unauthorized', 401));
 
-      final request = CreateMessageRequest(model: 'test', maxTokens: 100, messages: []);
-      expect(() => api.create(request), throwsA(isA<AuthenticationException>()));
+      final request =
+          CreateMessageRequest(model: 'test', maxTokens: 100, messages: []);
+      expect(
+          () => api.create(request), throwsA(isA<AuthenticationException>()));
     });
 
     tearDown(() {

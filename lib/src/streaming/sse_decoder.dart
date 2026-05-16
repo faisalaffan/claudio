@@ -11,9 +11,9 @@ class SseDecoder {
             .transform(const LineSplitter());
 
   Stream<String> get events => _lines.map((line) {
-    if (line.startsWith('data: ')) {
-      return line.substring(6);
-    }
-    return '';
-  }).where((data) => data.isNotEmpty && data != '[DONE]');
+        if (line.startsWith('data: ')) {
+          return line.substring(6);
+        }
+        return '';
+      }).where((data) => data.isNotEmpty && data != '[DONE]');
 }

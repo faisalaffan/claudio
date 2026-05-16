@@ -5,7 +5,8 @@ import 'package:test/test.dart';
 void main() {
   group('createToolResult', () {
     test('creates ToolResultBlock with toolUseId and text', () {
-      final result = createToolResult(toolUseId: 'toolu_01', text: 'Sunny, 30C');
+      final result =
+          createToolResult(toolUseId: 'toolu_01', text: 'Sunny, 30C');
       expect(result.toolUseId, 'toolu_01');
       expect(result.content, 'Sunny, 30C');
     });

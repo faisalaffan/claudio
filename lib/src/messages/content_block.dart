@@ -25,7 +25,8 @@ class ToolUseBlock extends ContentBlock {
   final String name;
   final Map<String, dynamic> input;
 
-  const ToolUseBlock({required this.id, required this.name, required this.input});
+  const ToolUseBlock(
+      {required this.id, required this.name, required this.input});
 
   factory ToolUseBlock.fromJson(Map<String, dynamic> json) {
     return ToolUseBlock(
@@ -36,7 +37,8 @@ class ToolUseBlock extends ContentBlock {
   }
 
   @override
-  Map<String, dynamic> toJson() => {'type': 'tool_use', 'id': id, 'name': name, 'input': input};
+  Map<String, dynamic> toJson() =>
+      {'type': 'tool_use', 'id': id, 'name': name, 'input': input};
 }
 
 /// Tool result sent back to the model.
@@ -45,15 +47,16 @@ class ToolResultBlock extends ContentBlock {
   final String? content;
   final List<Map<String, dynamic>>? contentBlocks;
 
-  const ToolResultBlock({required this.toolUseId, this.content, this.contentBlocks});
+  const ToolResultBlock(
+      {required this.toolUseId, this.content, this.contentBlocks});
 
   @override
   Map<String, dynamic> toJson() => {
-    'type': 'tool_result',
-    'tool_use_id': toolUseId,
-    if (content != null) 'content': content,
-    if (contentBlocks != null) 'content': contentBlocks,
-  };
+        'type': 'tool_result',
+        'tool_use_id': toolUseId,
+        if (content != null) 'content': content,
+        if (contentBlocks != null) 'content': contentBlocks,
+      };
 }
 
 /// Image content block (base64 or URL).
@@ -62,13 +65,14 @@ class ImageBlock extends ContentBlock {
   final String mediaType;
   final String data;
 
-  const ImageBlock({required this.sourceType, required this.mediaType, required this.data});
+  const ImageBlock(
+      {required this.sourceType, required this.mediaType, required this.data});
 
   @override
   Map<String, dynamic> toJson() => {
-    'type': 'image',
-    'source': {'type': sourceType, 'media_type': mediaType, 'data': data},
-  };
+        'type': 'image',
+        'source': {'type': sourceType, 'media_type': mediaType, 'data': data},
+      };
 }
 
 /// Extended thinking block from the model.
@@ -86,5 +90,6 @@ class ThinkingBlock extends ContentBlock {
   }
 
   @override
-  Map<String, dynamic> toJson() => {'type': 'thinking', 'thinking': thinking, 'signature': signature};
+  Map<String, dynamic> toJson() =>
+      {'type': 'thinking', 'thinking': thinking, 'signature': signature};
 }

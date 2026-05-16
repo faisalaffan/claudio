@@ -31,14 +31,21 @@ void main() {
     });
 
     test('supports all features', () {
-      expect(adapter.supportedFeatures, containsAll([
-        Feature.extendedThinking, Feature.imageInput, Feature.toolUse,
-        Feature.streaming, Feature.systemPrompt, Feature.promptCaching,
-      ]));
+      expect(
+          adapter.supportedFeatures,
+          containsAll([
+            Feature.extendedThinking,
+            Feature.imageInput,
+            Feature.toolUse,
+            Feature.streaming,
+            Feature.systemPrompt,
+            Feature.promptCaching,
+          ]));
     });
 
     test('validateRequest does not throw for valid request', () {
-      final request = CreateMessageRequest(model: 'test', maxTokens: 100, messages: []);
+      final request =
+          CreateMessageRequest(model: 'test', maxTokens: 100, messages: []);
       expect(() => adapter.validateRequest(request), returnsNormally);
     });
   });
@@ -60,12 +67,15 @@ void main() {
     });
 
     test('does NOT support extendedThinking', () {
-      expect(adapter.supportedFeatures.contains(Feature.extendedThinking), false);
+      expect(
+          adapter.supportedFeatures.contains(Feature.extendedThinking), false);
     });
 
     test('throws UnsupportedFeatureException for thinking', () {
       final request = CreateMessageRequest(
-        model: 'deepseek-chat', maxTokens: 100, messages: [],
+        model: 'deepseek-chat',
+        maxTokens: 100,
+        messages: [],
         thinking: const ThinkingConfig.enabled(),
       );
       expect(
@@ -75,9 +85,13 @@ void main() {
     });
 
     test('supports tool use, streaming, systemPrompt', () {
-      expect(adapter.supportedFeatures, containsAll([
-        Feature.toolUse, Feature.streaming, Feature.systemPrompt,
-      ]));
+      expect(
+          adapter.supportedFeatures,
+          containsAll([
+            Feature.toolUse,
+            Feature.streaming,
+            Feature.systemPrompt,
+          ]));
     });
   });
 }

@@ -5,7 +5,8 @@ import 'package:test/test.dart';
 void main() {
   group('SchemaProperty', () {
     test('string property', () {
-      final p = SchemaProperty.string(description: 'A string', enumValues: ['a', 'b']);
+      final p = SchemaProperty.string(
+          description: 'A string', enumValues: ['a', 'b']);
       final json = p.toJson();
       expect(json['type'], 'string');
       expect(json['description'], 'A string');
