@@ -6,6 +6,23 @@ version: 0.1.4
 homepage: https://github.com/faisalaffan/claudio
 repository: https://github.com/faisalaffan/claudio
 issue_tracker: https://github.com/faisalaffan/claudio/issues
+documentation: https://pub.dev/documentation/claudio_sdk/latest/
+
+topics:
+  - ai
+  - llm
+  - anthropic
+  - claude
+  - sdk
+
+screenshots:
+  - description: "Terminal output example"
+    path: screenshots/terminal_example.png
+  - description: "Package architecture"
+    path: screenshots/architecture.png
+
+funding:
+  - https://github.com/sponsors/faisalaffan
 
 environment:
   sdk: ^3.0.0
