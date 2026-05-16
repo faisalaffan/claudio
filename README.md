@@ -15,9 +15,24 @@ Multi-provider AI SDK for Dart/Flutter — one interface, many providers.
 
 ## Install
 
+### Dart / Flutter
+
 ```yaml
 dependencies:
   claudio_sdk: ^0.1.0
+```
+
+### Docker
+
+```bash
+docker pull ghcr.io/faisalaffan/claudio:latest
+```
+
+```dockerfile
+FROM ghcr.io/faisalaffan/claudio:latest
+
+COPY . .
+RUN dart run main.dart
 ```
 
 ## Quick Start

@@ -1,0 +1,14 @@
+.dart_tool/
+.git/
+.github/
+.kiro/
+.superpowers/
+assets/
+doc/
+screenshots/
+scripts/
+test/
+.DS_Store
+.gitignore
+.pubignore
+README.id.md
