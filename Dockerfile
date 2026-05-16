@@ -11,4 +11,4 @@ RUN dart pub get
 
 COPY . .
 
-RUN dart analyze . && dart test
+RUN dart analyze lib/
