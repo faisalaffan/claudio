@@ -1,0 +1,45 @@
+direction: right
+theme: 1
+
+App -> ClaudioClient: import package:claudio_sdk/claudio_sdk.dart
+
+ClaudioClient: {
+  apiKey: string
+  provider: Provider enum
+}
+
+ClaudioClient -> MessagesAPI: client.messages
+ClaudioClient -> ProviderAdapter: internal dispatch
+
+ProviderAdapter: {
+  AnthropicAdapter
+  DeepSeekAdapter
+}
+
+MessagesAPI -> ProviderAdapter: adapt request
+
+ProviderAdapter -> Anthropic_API: HTTP POST /v1/messages
+ProviderAdapter -> DeepSeek_API: HTTP POST /v1/chat/completions
+
+Anthropic_API: "Anthropic API"
+DeepSeek_API: "DeepSeek API"
+
+MessagesAPI: {
+  "create(): Future<MessageResponse>"
+  "createStream(): Stream<SseEvent>"
+}
+
+MessageResponse: {
+  "Stream<SseEvent>"
+  "TextDelta"
+  "InputJsonDelta"
+  "ToolUseBlock"
+}
+
+ClaudioClient -> ErrorHandling: typed exceptions
+ErrorHandling: {
+  AuthenticationException
+  RateLimitException
+  ApiException
+  NetworkException
+}
