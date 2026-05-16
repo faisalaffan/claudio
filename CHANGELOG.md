@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.8] - 2026-05-16
+
+### Added
+
+- Sponsor section in README with GitHub Sponsors, Ko-fi, and Saweria badges
+- Multi-platform funding configuration in .github/FUNDING.yml
+
 ## [0.1.7] - 2026-05-16
 
 ### Added

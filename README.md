@@ -117,6 +117,14 @@ try {
 }
 ```
 
+## Sponsor
+
+If you find this project useful, consider supporting its development:
+
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-faisalaffan-ea4aaa?logo=github)](https://github.com/sponsors/faisalaffan)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-faisalaffan-ff5e5b?logo=kofi)](https://ko-fi.com/faisalaffan)
+[![Saweria](https://img.shields.io/badge/Saweria-faisalaffan-fdba74?logo=buymeacoffee)](https://saweria.co/faisalaffan)
+
 ## License
 
 MIT
