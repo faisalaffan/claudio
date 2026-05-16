@@ -15,9 +15,24 @@ Multi-provider AI SDK untuk Dart/Flutter — satu interface, banyak provider.
 
 ## Install
 
+### Dart / Flutter
+
 ```yaml
 dependencies:
   claudio_sdk: ^0.1.0
+```
+
+### Docker
+
+```bash
+docker pull ghcr.io/faisalaffan/claudio:latest
+```
+
+```dockerfile
+FROM ghcr.io/faisalaffan/claudio:latest
+
+COPY . .
+RUN dart run main.dart
 ```
 
 ## Quick Start
@@ -116,6 +131,14 @@ try {
   print('Network: ${e.message}');
 }
 ```
+
+## Sponsor
+
+Jika proyek ini bermanfaat, dukung pengembangannya:
+
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-faisalaffan-ea4aaa?logo=github)](https://github.com/sponsors/faisalaffan)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-faisalaffan-ff5e5b?logo=kofi)](https://ko-fi.com/faisalaffan)
+[![Saweria](https://img.shields.io/badge/Saweria-faisalaffan-fdba74?logo=buymeacoffee)](https://saweria.co/faisalaffan)
 
 ## Lisensi
 
