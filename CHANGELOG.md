@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.7] - 2026-05-16
+
+### Added
+
+- GitHub community health files: SUPPORT.md, SECURITY.md, CODE_OF_CONDUCT.md
+- GitHub contribution files: CONTRIBUTING.md, CONTRIBUTORS.md, AUTHORS.md
+- GitHub metadata: CODEOWNERS, CITATION.cff, .github/FUNDING.yml, .github/dependabot.yml
+- Issue templates: bug report and feature request
+- Pull request template
+
 ## [0.1.6] - 2026-05-16
 
 ### Changed

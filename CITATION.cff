@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: claudio_sdk
+version: 0.1.6
+abstract: "Multi-provider AI SDK for Dart/Flutter with Anthropic Messages API-compatible interface."
+authors:
+  - family-names: Affan
+    given-names: Muhammad Faisal
+    email: faisalaffan.dev@gmail.com
+    orcid: ""
+repository-code: "https://github.com/faisalaffan/claudio"
+url: "https://github.com/faisalaffan/claudio"
+license: MIT
